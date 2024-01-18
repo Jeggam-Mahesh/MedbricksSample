@@ -1,0 +1,37 @@
+.backgrd-image{
+    background: url('https://ak-secure.hotwirestatic.com/s5dashboard/assets/images/BookBeyondYourMeansHero/uhp-767px.jpg');
+    background-position:0px;
+    background-size:cover;
+    min-height: 99vh;
+    margin-top: -9px;
+    
+}
+.find-container{
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0px 0px 1px black;
+   /* line-height:10px; */
+}
+.hotel{
+    position: relative;
+}
+#hotel-btn{
+    border-top:2px solid orangered ;
+}
+.find-main-container{
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    left: 20px;
+    width: max-content;
+    top: 20px;
+    line-height: 0px;
+    box-shadow: 0px 0px 1px black;
+    /* margin-bottom: 10px; */
+}
+
+.rooms-info{
+    display: flex;
+    justify-content: space-between;
+}

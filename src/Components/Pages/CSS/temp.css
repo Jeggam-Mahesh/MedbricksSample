@@ -1,0 +1,180 @@
+
+  .create{
+   box-Shadow: -1px 2px 2px 2px grey;
+   height: 50px;
+   position: sticky;
+   top: 0px;
+   z-index: 99999;
+   margin-top: -10px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   background-color: white;
+  }
+.div1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  
+}
+.home{
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  left: 230px;
+}
+.hotels{
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  left: 300px;
+ 
+}
+.cars{
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  left: 370px;
+ 
+}
+.getthe{
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  right: 460px;
+}
+#eye1{
+  font-size: 25px;
+  height: 20px;
+  margin: 5px;
+}
+.div2{
+  position: absolute;
+  right: 150px;
+ 
+}
+.button1{
+  border: "1px solid red";
+  border-radius: 25px;
+  width: 100px;
+  height: 25px;
+  color: red;
+  background-color: white;
+}
+.div3{
+  position: absolute;
+  top: 55%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  box-shadow: -1px 2px 2px 2px grey;
+  width: 460px;
+  overflow-y: auto;
+  max-height: 400px;
+ 
+
+}
+.p1{
+  box-shadow: -1px 2px 2px 2px grey;
+  height: 45px;
+  justify-content: center;
+  display: flex;
+  margin-top: 0px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+}#id2{
+  position: absolute;
+  top: 70px;
+  font-size: 25px;
+  text-indent: 150px;
+  
+}
+.input11{
+  text-align: center;
+  width: 400px;
+  height: 30px;
+ margin: 5px;
+}
+.hr1{
+  width: 400px;
+  margin: 5px;
+ 
+}
+.button2{
+  width: 400px;
+  height: 35px;
+  border-radius: 25px;
+  background-color: rgb(242, 98, 98);
+  border: none;
+  color: white;
+  margin: 5px;
+
+}
+.anchor{
+  text-decoration: none;
+  text-align: center;
+  margin-left: 100px;
+}
+.button3{
+  margin-left: 90px;
+  border: 1px solid red;
+  border-radius: 25px;
+  width: 126px;
+  height: 25px;
+}
+.button4{
+  border:1px solid red;
+  width: 100px;
+  height: 25px;
+   border-radius: 25px;
+   color: white;
+   background-color: rgb(242, 98, 98);;
+   margin: 20px;
+}
+.div4{
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: -1px 2px 2px 2px grey;
+width: 460px;
+height: 500px;
+overflow-y: auto;
+max-height: 400px;
+}
+.p2{
+  color: green;
+  margin: 10px;
+ 
+}
+#id3{
+  position: absolute;
+  top: 15px;
+  font-size: 25px;
+  text-indent: 150px;
+}
+.first{
+  text-align: center;
+  width: 400px;
+  height: 30px;
+  margin: 5px;
+}
+.button5{
+  width: 400px;
+  height: 35px;
+  border-radius: 25px;
+  background-color: rgb(242, 98, 98);;
+  border: none;
+  color: white;
+  margin: 5px;
+}
+.button6{
+  margin-left: 90px;
+  border: 1px solid red;
+  border-radius: 25px;
+  width: 126px;
+  
+  height: 25px;
+}
