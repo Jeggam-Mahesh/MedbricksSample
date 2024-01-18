@@ -137,7 +137,7 @@ return(<>
         <button className="button2">Signin</button>
       </div>
       <br/>
-      <a href="#" className="anchor">Forget Password</a>
+      <Link  className="anchor">Forget Password</Link>
       <hr/>
       <span style={{ margin: "5px" }}>Don't Have an account <button className="button3"onClick={Togglesignup}>Create one</button></span>
     </div>
