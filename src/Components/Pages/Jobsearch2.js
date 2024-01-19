@@ -3,8 +3,8 @@ import '../Pages/CSS/jobsearch.css'
 import { useEffect } from 'react';
 import axios from 'axios'
 function Jobsearch2() {
-  const [jobdata, setJobdata] = React.useState([
-    {
+  // const [jobdata, setJobdata] = React.useState([
+   const jobdata=[ {
         "id": 1,
         "slcp_ClinicianType": "Nurses",
         "slcp_Speciality": "Cardiology",
@@ -41,7 +41,7 @@ function Jobsearch2() {
         "slcp_Credentialing": [],
         "slcp_AdditionalRequirement": []
     }
-])
+]
   useEffect(() => {
     axios.get('http://74.235.105.192:35601/api/slcp_Jobs/GetByQuery?Id=0&includeProperties=slcp_Address,slcp_Shifts,slcp_Experience')
       .then((res) => console.log("##############################3",res))
