@@ -1,17 +1,16 @@
 import React from 'react'
-import hotelicon from '../Assets/Hotel-Building-Transparent.png'
-import caricon from '../Assets/caricon.png'
+
 import './CSS/Homepage.css'
-// import location from '../Assets/location-icon.png'
+import { IoPersonAdd } from "react-icons/io5";
 import { useState } from 'react'
 // import { VscAccount } from "react-icons/vsc";
 import { IoLocationSharp } from "react-icons/io5";
-
+import { IoBagRemoveSharp } from "react-icons/io5";
 
 import { useNavigate } from 'react-router-dom'
 function Homepage() {
   let navigate=useNavigate();
-const [data,setData]=useState('hotel')
+const [data,setData]=useState('job')
 // const [adult,setAdult]=useState(1)
 // const [Room,setRoom]=useState(1)
 // const [children,setChildren]=useState(0)
@@ -26,20 +25,22 @@ const [data,setData]=useState('hotel')
              document.getElementById('car-btn').style.borderTop="none"
             document.getElementById('hotel-btn').style.borderTop="2px solid orangered"
            setData('hotel')}} id='hotel-btn'>
-          <img src={hotelicon} width="30px" height="22px" alt='notfound'/>
-          <p>Job search</p>
+         
+           <IoBagRemoveSharp size={30}/>
+          <p>Job</p>
           </div>
           <div onClick={()=>{
              document.getElementById('hotel-btn').style.borderTop="none"
             document.getElementById('car-btn').style.borderTop="2px solid orangered"
             setData('car')}} id='car-btn'>
-          <img src={caricon} width="30px" height="22px" alt='notfound'/>
-          <p>locum avaialability</p>
+         
+          <IoPersonAdd size={30} />
+          <p>locum</p>
           </div>
           
           </div>
           {
-              data==="hotel"?
+              data==="job"?
 //               <div className='hotel'>  
 //               <p style={{textAlign:"left"}}><b>Destination</b></p>
 //               <div style={{position:"relative"}} >
@@ -112,7 +113,7 @@ const [data,setData]=useState('hotel')
 //              </div>
 //              <button style={{border:"1px solid orangered",marginTop:"10px",borderRadius:"10px",backgroundColor:'orangered',color:"whitesmoke",width:"300px",height:"50px"}}>Find a Car</button>
 //               </div>
-<div className='hotel'>  
+                  <div className='hotel'>  
              
              
               
@@ -282,7 +283,7 @@ const [data,setData]=useState('hotel')
                      
        <br/><br/>
        <div>
-       <button style={{width:"300px",height:'35px',backgroundColor:"red",color:"white",borderRadius:"25px",border:"none",margin:"8px"}} onClick={()=>navigate('/hotelsearch')}>Find a Job</button>
+       <button style={{width:"300px",height:'35px',backgroundColor:"red",color:"white",borderRadius:"25px",border:"none",margin:"8px"}} onClick={()=>navigate('/jobsearch')}>Find a Job</button>
        </div>  
              </div>
                    </div>
@@ -460,7 +461,7 @@ const [data,setData]=useState('hotel')
                      </div> 
        
                     <div>
-       <button style={{width:"300px",height:'35px',backgroundColor:"red",color:"white",borderRadius:"25px",border:"none",margin:"8px"}}>Find avaialability</button>
+       <button style={{width:"300px",height:'35px',backgroundColor:"red",color:"white",borderRadius:"25px",border:"none",margin:"8px"}} onClick={()=>navigate('/locumsearch')}>Find availability</button>
        </div>
                      </div>
             }

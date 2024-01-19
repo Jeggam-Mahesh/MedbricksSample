@@ -1,5 +1,5 @@
 .backgrd-image{
-    background: url('https://ak-secure.hotwirestatic.com/s5dashboard/assets/images/BookBeyondYourMeansHero/uhp-767px.jpg');
+    background: url('../../Assets//medBrick-background.jpg');
     background-position:0px;
     background-size:cover;
     min-height: 99vh;
@@ -10,6 +10,7 @@
     background-color: white;
     display: flex;
     gap: 20px;
+    justify-content: space-around;
     box-shadow: 0px 0px 1px black;
    /* line-height:10px; */
 }

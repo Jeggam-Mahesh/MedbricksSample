@@ -1,14 +1,11 @@
 import './header.css'
 import { Link } from 'react-router-dom'
 import React from 'react'
-
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import '../Pages/CSS/temp.css'
-// import { SlArrowDown } from "react-icons/sl";
 import { FaMobileScreen } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
-// import { FaCircle } from "react-icons/fa";
 import logo from '../Navbar/link.png'
 function Header(){
     const navigate=useNavigate()
@@ -49,12 +46,11 @@ return(<>
     <div className='top-container'>
     <div className='left-header'>
         <img src={logo} alt="not" width="100px" height="30px" onClick={()=>navigate('/')}/>
-        {/* <h1>h<FaCircle style={{width:"20px",height:"20px",color:"orangered"}}/>twire</h1> */}
+ 
         <div className='headerLink'>
-            <Link className='Link' to='/jobsearch'>Job search</Link>
-            <Link className='Link' to='/locum'> Locum Availability</Link>
-            {/* <Link className='Link' to='/flights'>Flights</Link>
-            <Link className='Link' to='/vacations'>Vacations</Link> */}
+            <Link className='Link' to='/job'>Job </Link>
+            <Link className='Link' to='/locum'> Locum</Link>
+          
             
         </div>
     </div>

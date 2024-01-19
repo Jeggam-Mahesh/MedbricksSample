@@ -1,21 +1,21 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
-import Jobsearch from '../Pages/Jobsearch'
+import Job from '../Pages/Job'
 import Locum from '../Pages/Locum'
 
 import Homepage from '../Pages/Homepage'
-import HotelSearch from '../Pages/HotelSearch'
-import CarSearch from '../Pages/CarSearch'
+import Jobsearch2 from '../Pages/Jobsearch2'
+import LocumSearch from '../Pages/LocumSearch'
 function RouteComp() {
     return (
        <>
        <Routes>
         <Route path="/" element={<Homepage/>} />
-        <Route path="/jobsearch" element={<Jobsearch/>} />
+        <Route path="/job" element={<Job/>} />
         <Route path="/locum" element={<Locum/>} />
        
-        <Route path="/hotelsearch" element={<HotelSearch/>}/>
-        <Route path="/carsearch" element={<CarSearch/>}/>
+        <Route path="/jobsearch" element={<Jobsearch2/>}/>
+        <Route path="/locumsearch" element={<LocumSearch/>}/>
        </Routes>
        </> 
     )
