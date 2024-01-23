@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
-import Job from '../Pages/Job'
+import Facility from '../Pages/Facility'
 import Locum from '../Pages/Locum'
 
 import Homepage from '../Pages/Homepage'
@@ -11,7 +11,7 @@ function RouteComp() {
        <>
        <Routes>
         <Route path="/" element={<Homepage/>} />
-        <Route path="/job" element={<Job/>} />
+        <Route path="/facility" element={<Facility/>} />
         <Route path="/locum" element={<Locum/>} />
        
         <Route path="/jobsearch" element={<Jobsearch2/>}/>

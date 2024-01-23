@@ -3,8 +3,7 @@
     background-position:0px;
     background-size:cover;
     min-height: 99vh;
-    margin-top: -9px;
-    
+    margin-top: -9px; 
 }
 .find-container{
     background-color: white;
@@ -16,6 +15,7 @@
 }
 .hotel{
     position: relative;
+    text-align: left;
 }
 #hotel-btn{
     border-top:2px solid orangered ;
@@ -30,6 +30,7 @@
     line-height: 0px;
     box-shadow: 0px 0px 1px black;
     /* margin-bottom: 10px; */
+    text-align: left;
 }
 
 .rooms-info{

@@ -46,17 +46,14 @@ return(<>
     <div className='top-container'>
     <div className='left-header'>
         <img src={logo} alt="not" width="100px" height="30px" onClick={()=>navigate('/')}/>
- 
         <div className='headerLink'>
-            <Link className='Link' to='/job'>Job </Link>
-            <Link className='Link' to='/locum'> Locum</Link>
-          
-            
+        <Link className='Link' to='/locum' >Locum</Link>
+            <Link className='Link' to='/facility'> Facility </Link>   
         </div>
     </div>
     <div className='right-header'>
         <div className='right-header-link'>
-        <p>Get the app<FaMobileScreen/></p>
+        <p style={{display:"flex",flexDirection:"row"}}>Get the app<FaMobileScreen/></p>
         <div className='dropdown'>
             <p onClick={handlesupport} className='dropdown-btn'>Support{supportArrowIcon}</p>
             
@@ -113,7 +110,7 @@ return(<>
     </p>
     <div style={{ width: "440px", marginTop: "-1px" }}>
       <div style={{ margin: "5px" }}>
-       <i className="fa fa-google" aria-hidden="true" id="id2"></i> 
+      <FcGoogle  style={{width:"30px",height:"30px",position:"absolute",right:"247px",top:"69px"}}/>
         <input type="text" placeholder="Google" className="input11"/>
       </div>
       <hr className="hr1" />
@@ -157,7 +154,7 @@ return(<>
       <div style={{ margin: "5px" }}>
       
         <input type="text" placeholder="Google" style={{ textAlign: "center", width: "400px", height: "30px", position:"relative"}} />
-        <FcGoogle  style={{width:"30px",height:"30px",position:"absolute",right:"247px",top:"150px"}}/>
+        <FcGoogle  style={{width:"30px",height:"30px",position:"absolute",right:"247px"}}/>
       </div>
       <hr style={{ width: "400px", margin: "5px" }} />
       <p style={{ textAlign: "center" }}>or</p>
