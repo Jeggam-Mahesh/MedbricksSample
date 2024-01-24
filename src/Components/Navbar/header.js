@@ -49,6 +49,8 @@ return(<>
         <div className='headerLink'>
         <Link className='Link' to='/locum' >Locum</Link>
             <Link className='Link' to='/facility'> Facility </Link>   
+            <Link className='Link' to='/jobpost' >Job Post</Link>
+            <Link className='Link' to='/availabilitypost'> AvailabilityPost </Link>   
         </div>
     </div>
     <div className='right-header'>

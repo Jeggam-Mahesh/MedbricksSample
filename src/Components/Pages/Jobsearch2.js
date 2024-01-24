@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function Jobsearch2() {
   const [jobdata2, setJobdata] = React.useState()
   const [filteredData, setFilteredData] = useState([]);
-  
+  const [toggle,setToggle]=useState(false)
 
   useEffect(() => {
     
@@ -24,6 +24,7 @@ function Jobsearch2() {
  console.log("jobdata....................",jobdata2);
     const fetchData = async () => {
       try {
+        setToggle(!toggle)
         console.log("Query...............",query);
         for (const key in query) {
           if (query.hasOwnProperty(key) && query[key] === '') {
@@ -194,39 +195,19 @@ query[e.target.name]=e.target.value
         <div className='hotels-display-container'>
         <div className='hotels-container'>
         <div>
-          {
-            filteredData&&filteredData.map((item,index)=><>
-             <div key={index} className='jobdata'>
-                <div>
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNgP3tE356e3vqLq-YRAouToJJUrGxp7i2gA&usqp=CAU" alt='not'width='200px' height="200px"/>
-                </div>
-                <div>
-                <p><b>ClinicianType</b>:{item.slcp_Jobs.slcp_ClinicianType}</p>
-                <p><b>Speciality:</b>{item.slcp_Jobs.slcp_Speciality}</p>
-                <p><b>PatientLoad</b>:{item.slcp_Jobs.slcp_PatientLoad}</p>
-                <b>Address</b>
-                <p>
-                  <li>{item.slcp_Jobs.slcp_Address.slcp_Street},
-                  {item.slcp_Jobs.slcp_Address.slcp_City},
-                  {item.slcp_Jobs.slcp_Address.slcp_Zip},
-                  {item.slcp_Jobs.slcp_Address.slcp_State}</li>
-                  </p>
-                  <p> <b>from</b>{item.slcp_Jobs.slcp_Duration.slcp_FromDate}<b>To</b>{item.slcp_Jobs.slcp_Duration.slcp_ToDate}</p>
-                  
-                    </div>
-              </div>
-            </>)
-          }
-          {
+         {
+          !toggle?
+          <>
+           {
             jobdata2&&jobdata2.map((item,index)=>(
               <div key={index} className='jobdata'>
                 <div>
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNgP3tE356e3vqLq-YRAouToJJUrGxp7i2gA&usqp=CAU" alt='not'width='200px' height="200px"/>
                 </div>
                 <div>
-                <p><b>ClinicianType</b>:{item.slcp_Jobs.slcp_ClinicianType}</p>
-                <p><b>Speciality:</b>{item.slcp_Jobs.slcp_Speciality}</p>
-                <p><b>PatientLoad</b>:{item.slcp_Jobs.slcp_PatientLoad}</p>
+                <p className='job-info'><b>ClinicianType</b>:{item.slcp_Jobs.slcp_ClinicianType}</p>
+                <p  className='job-info'><b>Speciality:</b>{item.slcp_Jobs.slcp_Speciality}</p>
+                <p  className='job-info'><b>PatientLoad</b>:{item.slcp_Jobs.slcp_PatientLoad}</p>
                 <b>Address</b>
                 <p>
                   <li>{item.slcp_Jobs.slcp_Address.slcp_Street},
@@ -248,6 +229,36 @@ query[e.target.name]=e.target.value
               </div>)
             )
           }
+          </>
+          :
+         <>
+          {
+            filteredData&&filteredData.map((item,index)=><>
+             <div key={index} className='jobdata'>
+                <div>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNgP3tE356e3vqLq-YRAouToJJUrGxp7i2gA&usqp=CAU" alt='not'width='200px' height="200px"/>
+                </div>
+                <div>
+                <p  className='job-info'><b>ClinicianType</b>:{item.slcp_Jobs.slcp_ClinicianType}</p>
+                <p  className='job-info'><b>Speciality:</b>{item.slcp_Jobs.slcp_Speciality}</p>
+                <p  className='job-info'><b>PatientLoad</b>:{item.slcp_Jobs.slcp_PatientLoad}</p>
+                <b>Address</b>
+                <p>
+                  <li>{item.slcp_Jobs.slcp_Address.slcp_Street},
+                  {item.slcp_Jobs.slcp_Address.slcp_City},
+                  {item.slcp_Jobs.slcp_Address.slcp_Zip},
+                  {item.slcp_Jobs.slcp_Address.slcp_State}</li>
+                  </p>
+                  <p> <b>from</b>{item.slcp_Jobs.slcp_Duration.slcp_FromDate}<b>To</b>{item.slcp_Jobs.slcp_Duration.slcp_ToDate}</p>
+                  
+                    </div>
+              </div>
+            </>)
+          }
+         </>
+         }
+         
+         
         </div>
     
       

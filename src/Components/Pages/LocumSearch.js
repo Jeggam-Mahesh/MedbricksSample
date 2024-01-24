@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import '../Pages/CSS/jobsearch.css'
 import axios from 'axios';
 import doctor from '../Assets/3464192.jpg'
+import fm_doctor from '../Assets/doctor2.avif'
 import { useEffect } from 'react';
 function LocumSearch() {
   const [locumdata,setLocumdata]=useState();
   const [filterlocum,setFilterLocum]=useState();
+  const [toggle,setToggle]=useState(false)
  const searchdata={
     clinician_type:"",
     speciality:"",
@@ -25,11 +27,13 @@ e.preventDefault()
 searchdata[e.target.name]=e.target.value
 }
 const handleFilter= async()=>{
+  setToggle(!toggle);
   console.log("ssssssssssss",searchdata);
   await axios.get('http://74.235.105.192:35601/api/Reports/slcp_AvailabilitySearchLinq',{params:searchdata})
   .then((res)=>{console.log("Response=====",res.data)
   setFilterLocum(res.data)}).catch((err)=>{
     console.log("error",err);
+   
   })
 
 }
@@ -119,7 +123,10 @@ const handleFilter= async()=>{
        <div>
        <div className='hotels-display-container'>
         <div className='hotels-container'>
-        {
+          {
+   !toggle?
+   <>
+    {
   locumdata&&locumdata.map((item) => (
     <div className="hotels-info" key={item.id} style={{minHeight:""}}>
       <div>
@@ -152,7 +159,50 @@ const handleFilter= async()=>{
     
     </div>
   ))
-}        </div>
+}      
+   </>
+   :
+   <>
+     {
+  filterlocum&&filterlocum.map((item) => (
+    <div className="hotels-info" key={item.id} style={{minHeight:""}}>
+      <div>
+      
+        <img src={fm_doctor} alt='doctor' width="200px" height="250"/>
+      </div>
+      <div style={{ marginLeft: "8px" }}>
+        <p><b>ClinicianType: </b>{item.slcp_Locums.slcp_ClinicianType}</p>
+        <p><b>Speciality:</b> {item.slcp_Locums.slcp_Speciality}</p>
+        {/* <p>
+          Name: {item.slcp_Name && (
+            <>
+              {item.slcp_Name.slcp_FirstName} <span style={{ marginLeft: "8px" }}>{item.slcp_Name.slcp_Title}</span>
+            </>
+          )}
+        </p> */}
+        {/* <p>
+          Contact: {item.slcp_LocumContact && (
+            <span style={{ margin: "5px", color: "green" }}>{item.slcp_LocumContact.slcp_MobileNumber}</span>
+          )}
+          <p >Gmail:: {item.slcp_LocumContact && item.slcp_LocumContact.slcp_Email}</p>
+        </p> */}
+        {/* <p>
+          DOB: {item.slcp_DoB && ( <>
+              {item.slcp_DoB.slcp_MonthofBirth}  {item.slcp_DoB.slcp_YearofBirth} 
+            </>
+          )}
+        </p> */}
+        <p><b>FromDate:</b><p>{item.slcp_Availabilitys.slcp_FromDate}</p></p>
+        <p><b>ToDate:</b><p>{item.slcp_Availabilitys.slcp_ToDate}</p></p>
+      </div>
+    
+    </div>
+  ))
+}  
+   </>
+          }
+          
+  </div>
         <div className='map'>
             <img src="https://www.wired.com/wp-content/uploads/2016/11/GoogleMapTA.jpg" alt='not' height="600px" />
         </div>

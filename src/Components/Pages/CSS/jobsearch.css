@@ -61,3 +61,7 @@ li{
   width: 98%;
   padding: 5px;
 }
+.job-info{
+    display: flex;
+    flex-direction: row;
+}
